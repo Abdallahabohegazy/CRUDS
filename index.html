@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">   -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+        <div class="container py-4">
+            <h1 class="text-center my-3 ">CRUD SYSTEM</h1>
+            <label for="productName">productName : </label>
+            <input type="text" class=" mb-3 form-control" id="productName">
+
+            <label for="productPrice">productPrice : </label>
+            <input type="text" class=" mb-3 form-control" id="productPrice">
+
+            <label for="productCategory">productCategory : </label>
+            <input type="text" class=" mb-3 form-control" id="productCategory">
+
+            <label for="productDesc">productDesc : </label>
+            <textarea type="text" cols="3" rows="3" class=" mb-3 form-control" id="productDesc"></textarea>
+
+            <button id="addBtn" onclick="addProduct()" class="btn d-block w-100 btn-info">Add product</button>
+            <button id="updateBtn" onclick="updateProduct()" class="btn d-none  w-100 btn-warning mt-2">Update product</button>
+        </div>
+        <div class="w-75 mx-auto my-3">
+            <input type="text" oninput="searchProducts(this.value)" id="searchInput" placeholder="Search by name..." class="form-control w-75 my-3 mx-auto">
+            <table class=" table table-hover text-center">
+                <thead>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Desc</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Js -->
+                </tbody>
+            </table>
+        </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
